@@ -22,7 +22,7 @@ X-Cardia aligns chest CT with structured ECHO and ECG phenotypes during pre-trai
 ## Method Overview
 
 <p align="center">
-  <img src="figures/overview.png" width="800">
+  <img src="Figures/overview.png" width="800">
 </p>
 
 During pre-training, X-Cardia aligns CT and tabular representations using:
@@ -31,14 +31,6 @@ During pre-training, X-Cardia aligns CT and tabular representations using:
 
 During fine-tuning, only the CT encoder is used to predict cardiac abnormalities from chest CT.
 
----
-
-##  Qualitative & Representation Analysis
-
-**Cross-modal alignment (PCA):**
-<p align="center">
-  <img src="figures/pca_alignment.png" width="700">
-</p>
 ---
 
 ## Code Structure
