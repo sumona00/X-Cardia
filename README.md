@@ -3,19 +3,19 @@
 **MIDL 2026**  
 *Under Review*
 
-This repository contains the official PyTorch implementation of **X-Cardia**, a phenotype-guided multimodal learning framework for opportunistic cardiac screening from **non-gated, non-contrast chest CT**.
+This repository contains the official PyTorch implementation of **X-Cardia**, a phenotype-guided multimodal learning framework for opportunistic cardiac screening from non-gated, non-contrast chest CT.
 
-X-Cardia aligns chest CT with structured **ECHO and ECG phenotypes** during pre-training using contrastive learning and a **non-parametric Nadaraya–Watson (NW) head**, producing transferable and interpretable CT representations for downstream cardiac abnormality prediction.
+X-Cardia aligns chest CT with structured ECHO and ECG phenotypes during pre-training using contrastive learning and a non-parametric Nadaraya–Watson (NW) head, producing transferable and interpretable CT representations for downstream cardiac abnormality prediction.
 
 ---
 
 ##  Key Contributions
 
 - Phenotype-guided multimodal alignment between CT, ECHO, and ECG  
-- Non-parametric **Nadaraya–Watson head** for exemplar-based phenotype supervision  
-- Strong gains in **few-shot learning** (up to 11.8% AUROC improvement in 5-shot)  
-- Enables **opportunistic cardiac screening** using routine chest CT  
-- Interpretable representations with **cardiac-focused Grad-CAM** attention  
+- Non-parametric Nadaraya–Watson head for exemplar-based phenotype supervision  
+- Strong gains in few-shot learning (up to 11.8% AUROC improvement in 5-shot)  
+- Enables opportunistic cardiac screening using routine chest CT  
+- Interpretable representations with cardiac-focused Grad-CAM attention  
 
 ---
 
@@ -25,11 +25,11 @@ X-Cardia aligns chest CT with structured **ECHO and ECG phenotypes** during pre-
   <img src="Figures/overview.png" width="800">
 </p>
 
-During **pre-training**, X-Cardia aligns CT and tabular representations using:
+During pre-training, X-Cardia aligns CT and tabular representations using:
 - CLIP-style multimodal contrastive loss  
 - Phenotype-level supervision via a Nadaraya–Watson head  
 
-During **fine-tuning**, only the CT encoder is used to predict cardiac abnormalities from chest CT.
+During fine-tuning, only the CT encoder is used to predict cardiac abnormalities from chest CT.
 
 ---
 
