@@ -1,6 +1,6 @@
 # X-Cardia: Phenotype-Guided Cross-Modal Alignment for Opportunistic Cardiac Screening on Routine Chest CT
 
-**MIDL 2026 (Full Paper Submission)**  
+**MIDL 2026**  
 *Under Review*
 
 This repository contains the official PyTorch implementation of **X-Cardia**, a phenotype-guided multimodal learning framework for opportunistic cardiac screening from **non-gated, non-contrast chest CT**.
@@ -9,7 +9,7 @@ X-Cardia aligns chest CT with structured **ECHO and ECG phenotypes** during pre-
 
 ---
 
-## 🔑 Key Contributions
+##  Key Contributions
 
 - Phenotype-guided multimodal alignment between CT, ECHO, and ECG  
 - Non-parametric **Nadaraya–Watson head** for exemplar-based phenotype supervision  
@@ -19,7 +19,7 @@ X-Cardia aligns chest CT with structured **ECHO and ECG phenotypes** during pre-
 
 ---
 
-## 🧠 Method Overview
+##  Method Overview
 
 <p align="center">
   <img src="Figures/overview.png" width="800">
@@ -33,14 +33,14 @@ During **fine-tuning**, only the CT encoder is used to predict cardiac abnormali
 
 ---
 
-## 📁 Code Structure
+##  Code Structure
 
 - `Pretrain/` – Multimodal contrastive learning with NW head  
 - `Finetune/` – Supervised CT-only downstream training  
 
 ---
 
-## 📦 Pretrained Model Weights
+##  Pretrained Model Weights
 
 We provide pretrained X-Cardia model weights obtained via phenotype-guided multimodal pre-training on paired chest CT, ECHO, and ECG data.
 
@@ -50,7 +50,7 @@ We provide pretrained X-Cardia model weights obtained via phenotype-guided multi
 
 | Model | Description | Download |
 |------|------------|----------|
-| X-Cardia (NW + MMCL) | CT encoder pretrained with phenotype-guided multimodal alignment | [Download]([LINK_TO_WEIGHTS](https://drive.google.com/drive/folders/1n33YOO6_U5ZG4ynL1BPvLElXWLfZZ5Zu?usp=drive_link)) |
+| X-Cardia (NW + MMCL) | CT encoder pretrained with phenotype-guided multimodal alignment | [Download](https://drive.google.com/drive/folders/1n33YOO6_U5ZG4ynL1BPvLElXWLfZZ5Zu?usp=drive_link) |
 
 ### Checkpoint Details
 
