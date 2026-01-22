@@ -22,7 +22,7 @@ X-Cardia aligns chest CT with structured ECHO and ECG phenotypes during pre-trai
 ## Method Overview
 
 <p align="center">
-  <img src="figures/overview_xcardia.png" width="800">
+  <img src="figures/overview.png" width="800">
 </p>
 
 During pre-training, X-Cardia aligns CT and tabular representations using:
@@ -54,7 +54,7 @@ During fine-tuning, only the CT encoder is used to predict cardiac abnormalities
 
 ---
 
-## ⚙️ Installation
+##  Installation
 
 ```bash
 conda create -n xcardia python=3.9
