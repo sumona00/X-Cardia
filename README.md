@@ -39,12 +39,6 @@ During fine-tuning, only the CT encoder is used to predict cardiac abnormalities
 <p align="center">
   <img src="figures/pca_alignment.png" width="700">
 </p>
-
-**Cardiac attention via Grad-CAM:**
-<p align="center">
-  <img src="figures/gradcam_examples.png" width="700">
-</p>
-
 ---
 
 ## Code Structure
