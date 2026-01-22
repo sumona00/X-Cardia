@@ -57,7 +57,6 @@ We provide pretrained X-Cardia model weights obtained via phenotype-guided multi
 - **Backbone:** 3D ResNet-50  
 - **Pre-training data:** Paired non-contrast chest CT + ECHO + ECG  
 - **Losses:** CLIP-style contrastive loss + Nadaraya–Watson phenotype loss  
-- **Input resolution:** 2 mm isotropic, center-cropped volumes  
 
 ### Loading Pretrained Weights
 
