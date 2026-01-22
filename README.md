@@ -1,3 +1,63 @@
 # X-Cardia: Phenotype-Guided Cross-Modal Alignment for Opportunistic Cardiac Screening on Routine Chest CT
-MIDL 2026 Submission
-This repository is meant to be a useful resource for using non-cardiac and non-contrast chest CTs for opportunistic screening.
+
+**MIDL 2026 (Full Paper Submission)**  
+*Under Review*
+
+This repository contains the official PyTorch implementation of **X-Cardia**, a phenotype-guided multimodal learning framework for opportunistic cardiac screening from non-gated, non-contrast chest CT.
+
+X-Cardia aligns chest CT with structured ECHO and ECG phenotypes during pre-training using contrastive learning and a non-parametric Nadaraya–Watson (NW) head, producing transferable and interpretable CT representations for downstream cardiac abnormality prediction.
+
+---
+
+## Key Contributions
+
+- Phenotype-guided multimodal alignment between CT, ECHO, and ECG
+- Non-parametric Nadaraya–Watson head for exemplar-based phenotype supervision
+- Strong gains in few-shot learning (up to 11.8% AUROC improvement in 5-shot)
+- Enables opportunistic cardiac screening using routine chest CTs
+- Interpretable representations with cardiac-focused Grad-CAM attention
+
+---
+
+## Method Overview
+
+<p align="center">
+  <img src="figures/overview_xcardia.png" width="800">
+</p>
+
+During pre-training, X-Cardia aligns CT and tabular representations using:
+- CLIP-style multimodal contrastive loss
+- Phenotype-level supervision via a Nadaraya–Watson head
+
+During fine-tuning, only the CT encoder is used to predict cardiac abnormalities from chest CT.
+
+---
+
+##  Qualitative & Representation Analysis
+
+**Cross-modal alignment (PCA):**
+<p align="center">
+  <img src="figures/pca_alignment.png" width="700">
+</p>
+
+**Cardiac attention via Grad-CAM:**
+<p align="center">
+  <img src="figures/gradcam_examples.png" width="700">
+</p>
+
+---
+
+## Code Structure
+
+- `pretraining/` – Multimodal contrastive + NW head pre-training
+- `finetuning/` – Supervised CT-only downstream training
+
+---
+
+## ⚙️ Installation
+
+```bash
+conda create -n xcardia python=3.9
+conda activate xcardia
+pip install -r requirements.txt
+
