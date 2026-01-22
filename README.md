@@ -46,4 +46,29 @@ During fine-tuning, only the CT encoder is used to predict cardiac abnormalities
 conda create -n xcardia python=3.9
 conda activate xcardia
 pip install -r requirements.txt
+---
 
+##  Pretrained Model Weights
+
+We provide pretrained X-Cardia model weights obtained via phenotype-guided multimodal pre-training on paired chest CT, ECHO, and ECG data.
+
+> **Note:** Model weights are released for **research use only** and contain **no patient-identifiable information**.
+
+### Available Checkpoints
+
+| Model | Description | Download |
+|------|------------|----------|
+| X-Cardia (NW + MMCL) | CT encoder pretrained with phenotype-guided multimodal alignment | [Download](LINK_TO_WEIGHTS) |
+
+## Checkpoint Details
+
+- **Backbone:** 3D ResNet-50  
+- **Pre-training data:** Paired non-contrast chest CT + ECHO + ECG  
+- **Losses:** CLIP-style contrastive loss + Nadaraya–Watson phenotype loss  
+- **Input resolution:** 2 mm isotropic, center-cropped volumes  
+
+### Loading Pretrained Weights
+
+```python
+checkpoint = torch.load("best_NW_Head_05.pth", map_location="cpu")
+model.load_state_dict(checkpoint["state_dict"], strict=False)
