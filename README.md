@@ -35,8 +35,8 @@ During fine-tuning, only the CT encoder is used to predict cardiac abnormalities
 
 ## Code Structure
 
-- `pretraining/` – Multimodal contrastive + NW head pre-training
-- `finetuning/` – Supervised CT-only downstream training
+- `Pretrain/` – Multimodal contrastive + NW head pre-training
+- `Finetune/` – Supervised CT-only downstream training
 
 ---
 
