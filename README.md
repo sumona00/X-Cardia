@@ -63,15 +63,15 @@ We provide pretrained X-Cardia model weights obtained via phenotype-guided multi
 ```python
 checkpoint = torch.load("best_NW_Head_05.pth", map_location="cpu")
 model.load_state_dict(checkpoint["state_dict"], strict=False)
+---
 
-cff-version: 1.2.0
-title: "X-Cardia: Phenotype-Guided Cross-Modal Alignment for Opportunistic Cardiac Screening on Routine Chest CT"
-authors:
-  - family-names: Author1
-    given-names: First
-  - family-names: Author2
-    given-names: First
-year: 2026
-conference: Medical Imaging with Deep Learning (MIDL)
-status: under review
+### Citation
+@inproceedings{XCardia2026,
+  title     = {X-Cardia: Phenotype-Guided Cross-Modal Alignment for Opportunistic Cardiac Screening on Routine Chest CT},
+  author    = {Nizam, Firstname and others},
+  booktitle = {Medical Imaging with Deep Learning (MIDL)},
+  year      = {2026},
+  note      = {Under review}
+}
+
 
