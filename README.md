@@ -68,7 +68,7 @@ model.load_state_dict(checkpoint["state_dict"], strict=False)
 ```
 @inproceedings{XCardia2026,
   title     = {X-Cardia: Phenotype-Guided Cross-Modal Alignment for Opportunistic Cardiac Screening on Routine Chest CT},
-  author    = {Nizam, Firstname and others},
+  author    = {Nizam et al.},
   booktitle = {Medical Imaging with Deep Learning (MIDL)},
   year      = {2026},
   note      = {Under review}
