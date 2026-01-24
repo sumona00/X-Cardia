@@ -65,13 +65,15 @@ checkpoint = torch.load("best_NW_Head_05.pth", map_location="cpu")
 model.load_state_dict(checkpoint["state_dict"], strict=False)
 ```
 ### Citation
-```@inproceedings{XCardia2026,
+```
+@inproceedings{XCardia2026,
   title     = {X-Cardia: Phenotype-Guided Cross-Modal Alignment for Opportunistic Cardiac Screening on Routine Chest CT},
   author    = {Nizam, Firstname and others},
   booktitle = {Medical Imaging with Deep Learning (MIDL)},
   year      = {2026},
   note      = {Under review}
-}```
+}
+```
 
 
 
